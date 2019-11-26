@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LoginC01
 {
-    public partial class frm_register : Form
+    public partial class frm_fgpassword : Form
     {
-        public frm_register()
+        public frm_fgpassword()
         {
             InitializeComponent();
         }

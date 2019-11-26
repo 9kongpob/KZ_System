@@ -17,7 +17,6 @@ namespace LoginC01
             InitializeComponent();
         }
 
-
         private void tb_username_Enter(object sender, EventArgs e)
         {
             if (tb_username.Text == "Enter Your Username")
@@ -53,6 +52,7 @@ namespace LoginC01
                 tb_password.ForeColor = Color.Gray;
             }
         }
+
         private void frm_login_Load(object sender, EventArgs e)
         {
             tb_username.Text = "Enter Your Username";
@@ -83,6 +83,12 @@ namespace LoginC01
             tb_username.Focus(); //unfocus
             tb_password.Focus(); //unfocus
 
+        }
+
+        private void btn_signup_MouseClick(object sender, MouseEventArgs e)
+        {
+            Form frm_register = new Form();
+            frm_register.ShowDialog();
         }
     }
 }

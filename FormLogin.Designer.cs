@@ -92,6 +92,7 @@
             this.btn_signup.TabIndex = 6;
             this.btn_signup.Text = "Sign Up";
             this.btn_signup.UseVisualStyleBackColor = true;
+            this.btn_signup.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btn_signup_MouseClick);
             // 
             // lb_forgotpass
             // 
