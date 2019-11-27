@@ -80,15 +80,64 @@ namespace LoginC01
 
         private void frm_login_Click(object sender, EventArgs e)
         {
-            tb_username.Focus(); //unfocus
-            tb_password.Focus(); //unfocus
 
+            if (tb_password.Text == "")
+            {
+                tb_password.Text = "********";
+                tb_password.TextAlign = HorizontalAlignment.Center;
+                tb_password.ForeColor = Color.Gray;
+            }
+            if (tb_username.Text == "")
+            {
+                tb_username.Text = "Enter Your Username";
+                tb_username.TextAlign = HorizontalAlignment.Center;
+                tb_username.ForeColor = Color.Gray;
+            }
+
+            ActiveControl = null;
         }
 
         private void btn_signup_MouseClick(object sender, MouseEventArgs e)
         {
-            Form frm_register = new Form();
-            frm_register.ShowDialog();
+            frm_register frm_Register = new frm_register();
+            frm_Register.Show();
+
+            this.Visible = false;
+        }
+
+        private void pb_logo_Click(object sender, EventArgs e)
+        {
+            if (tb_password.Text == "")
+            {
+                tb_password.Text = "********";
+                tb_password.TextAlign = HorizontalAlignment.Center;
+                tb_password.ForeColor = Color.Gray;
+            }
+            if (tb_username.Text == "")
+            {
+                tb_username.Text = "Enter Your Username";
+                tb_username.TextAlign = HorizontalAlignment.Center;
+                tb_username.ForeColor = Color.Gray;
+            }
+
+            ActiveControl = null;
+        }
+
+        private void lb_forgotpass_Click(object sender, EventArgs e)
+        {
+            //frm_fgpassword frm_Fgpassword = new frm_fgpassword();
+            //frm_Fgpassword.Show();
+
+            //this.Visible = false;
+
+            frm_fgpassword frm_fgpassword = new frm_fgpassword();
+            
+
+            this.Hide();
+
+            frm_fgpassword.ShowDialog();
+            
+
         }
     }
 }

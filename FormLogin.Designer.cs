@@ -103,6 +103,7 @@
             this.lb_forgotpass.Size = new System.Drawing.Size(156, 17);
             this.lb_forgotpass.TabIndex = 7;
             this.lb_forgotpass.Text = "Forgot Your Password?";
+            this.lb_forgotpass.Click += new System.EventHandler(this.lb_forgotpass_Click);
             this.lb_forgotpass.MouseEnter += new System.EventHandler(this.lb_forgotpass_MouseEnter);
             this.lb_forgotpass.MouseLeave += new System.EventHandler(this.lb_forgotpass_MouseLeave);
             // 
@@ -116,6 +117,7 @@
             this.pb_logo.Size = new System.Drawing.Size(85, 85);
             this.pb_logo.TabIndex = 8;
             this.pb_logo.TabStop = false;
+            this.pb_logo.Click += new System.EventHandler(this.pb_logo_Click);
             // 
             // frm_login
             // 

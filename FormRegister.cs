@@ -16,5 +16,10 @@ namespace LoginC01
         {
             InitializeComponent();
         }
+
+        private void frm_register_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //MessageBox.Show("Show status frm_login : "+frm_login.ActiveForm);
+        }
     }
 }

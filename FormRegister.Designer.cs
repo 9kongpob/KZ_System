@@ -48,8 +48,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(357, 305);
             this.Controls.Add(this.radioButton1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frm_register";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_register_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
