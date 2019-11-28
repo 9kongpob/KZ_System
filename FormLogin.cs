@@ -103,7 +103,7 @@ namespace LoginC01
 
             this.Hide();
             frm_Register.ShowDialog();
-
+            frm_Register.Dispose();
         }
 
         private void Pb_logo_Click(object sender, EventArgs e)
@@ -129,6 +129,7 @@ namespace LoginC01
             Frm_fgpassword frm_fgpassword = new Frm_fgpassword();
             this.Hide();
             frm_fgpassword.ShowDialog();
+            frm_fgpassword.Dispose();
 
         }
 

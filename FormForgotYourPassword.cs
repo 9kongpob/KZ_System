@@ -26,7 +26,7 @@ namespace LoginC01
             this.Hide();
             frm_login.ShowDialog();
             this.Close();
-
+            frm_login.Dispose();
 
         }
 
