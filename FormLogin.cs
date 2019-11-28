@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace LoginC01
 {
-    public partial class frm_login : Form
+    public partial class Frm_login : Form
     {
-        public frm_login()
+        public Frm_login()
         {
             InitializeComponent();
         }
 
-        private void tb_username_Enter(object sender, EventArgs e)
+        private void Tb_username_Enter(object sender, EventArgs e)
         {
             if (tb_username.Text == "Enter Your Username")
             {
@@ -25,7 +25,7 @@ namespace LoginC01
             }
         }
 
-        private void tb_username_Leave(object sender, EventArgs e)
+        private void Tb_username_Leave(object sender, EventArgs e)
         {
             if (tb_username.Text == "")
             {
@@ -35,7 +35,7 @@ namespace LoginC01
             }
         }
 
-        private void tb_password_Enter(object sender, EventArgs e)
+        private void Tb_password_Enter(object sender, EventArgs e)
         {
             if (tb_password.Text == "********")
             {
@@ -43,7 +43,7 @@ namespace LoginC01
             }
         }
 
-        private void tb_password_Leave(object sender, EventArgs e)
+        private void Tb_password_Leave(object sender, EventArgs e)
         {
             if (tb_password.Text == "")
             {
@@ -53,7 +53,7 @@ namespace LoginC01
             }
         }
 
-        private void frm_login_Load(object sender, EventArgs e)
+        private void Frm_login_Load(object sender, EventArgs e)
         {
             tb_username.Text = "Enter Your Username";
             tb_username.TextAlign = HorizontalAlignment.Center;
@@ -65,20 +65,20 @@ namespace LoginC01
 
         }
 
-        private void lb_forgotpass_MouseEnter(object sender, EventArgs e)
+        private void Lb_forgotpass_MouseEnter(object sender, EventArgs e)
         {
             lb_forgotpass.ForeColor = Color.Blue;
             lb_forgotpass.Font = new Font(lb_forgotpass.Font, FontStyle.Underline);
 
         }
 
-        private void lb_forgotpass_MouseLeave(object sender, EventArgs e)
+        private void Lb_forgotpass_MouseLeave(object sender, EventArgs e)
         {
             lb_forgotpass.ForeColor = Color.Black;
             lb_forgotpass.Font = new Font(lb_forgotpass.Font, FontStyle.Regular);
         }
 
-        private void frm_login_Click(object sender, EventArgs e)
+        private void Frm_login_Click(object sender, EventArgs e)
         {
 
             if (tb_password.Text == "")
@@ -97,47 +97,40 @@ namespace LoginC01
             ActiveControl = null;
         }
 
-        private void btn_signup_MouseClick(object sender, MouseEventArgs e)
+        private void Btn_signup_MouseClick(object sender, MouseEventArgs e)
         {
-            frm_register frm_Register = new frm_register();
-            frm_Register.Show();
-
-            this.Visible = false;
-        }
-
-        private void pb_logo_Click(object sender, EventArgs e)
-        {
-            if (tb_password.Text == "")
-            {
-                tb_password.Text = "********";
-                tb_password.TextAlign = HorizontalAlignment.Center;
-                tb_password.ForeColor = Color.Gray;
-            }
-            if (tb_username.Text == "")
-            {
-                tb_username.Text = "Enter Your Username";
-                tb_username.TextAlign = HorizontalAlignment.Center;
-                tb_username.ForeColor = Color.Gray;
-            }
-
-            ActiveControl = null;
-        }
-
-        private void lb_forgotpass_Click(object sender, EventArgs e)
-        {
-            //frm_fgpassword frm_Fgpassword = new frm_fgpassword();
-            //frm_Fgpassword.Show();
-
-            //this.Visible = false;
-
-            frm_fgpassword frm_fgpassword = new frm_fgpassword();
-            
+            Frm_register frm_Register = new Frm_register();
 
             this.Hide();
-
-            frm_fgpassword.ShowDialog();
-            
+            frm_Register.ShowDialog();
 
         }
+
+        private void Pb_logo_Click(object sender, EventArgs e)
+        {
+            if (tb_password.Text == "")
+            {
+                tb_password.Text = "********";
+                tb_password.TextAlign = HorizontalAlignment.Center;
+                tb_password.ForeColor = Color.Gray;
+            }
+            if (tb_username.Text == "")
+            {
+                tb_username.Text = "Enter Your Username";
+                tb_username.TextAlign = HorizontalAlignment.Center;
+                tb_username.ForeColor = Color.Gray;
+            }
+
+            ActiveControl = null;
+        }
+
+        private void Lb_forgotpass_Click(object sender, EventArgs e)
+        {
+            Frm_fgpassword frm_fgpassword = new Frm_fgpassword();
+            this.Hide();
+            frm_fgpassword.ShowDialog();
+
+        }
+
     }
 }

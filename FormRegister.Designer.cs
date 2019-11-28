@@ -1,6 +1,6 @@
 ﻿namespace LoginC01
 {
-    partial class frm_register
+    partial class Frm_register
     {
         /// <summary>
         /// Required designer variable.
@@ -42,7 +42,7 @@
             this.radioButton1.Text = "radioButton1";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // frm_register
+            // Frm_register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -50,10 +50,12 @@
             this.Controls.Add(this.radioButton1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frm_register";
+            this.Name = "Frm_register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_register_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_register_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_register_FormClosed);
+            this.Load += new System.EventHandler(this.Frm_register_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

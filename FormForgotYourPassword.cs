@@ -10,31 +10,35 @@ using System.Windows.Forms;
 
 namespace LoginC01
 {
-    public partial class frm_fgpassword : Form
+    public partial class Frm_fgpassword : Form
     {
-        public frm_fgpassword()
+        public Frm_fgpassword()
         {
             InitializeComponent();
+
         }
 
-        private void frm_fgpassword_FormClosed(object sender, FormClosedEventArgs e)
+        private void Frm_fgpassword_FormClosed(object sender, FormClosedEventArgs e)
         {
-            //MessageBox.Show("Form 1 : " + this.ShowDialog()) ;
 
-            //Application.Exit();
-            frm_login frm_login = new frm_login();
+            Frm_login frm_login = new Frm_login();
+
             this.Hide();
             frm_login.ShowDialog();
+            this.Close();
+
+
         }
 
-        private void frm_fgpassword_Load(object sender, EventArgs e)
+        private void Frm_fgpassword_Load(object sender, EventArgs e)
         {
+
             tb_emailReset.Text = "Email";
             tb_emailReset.ForeColor = Color.Gray;
 
         }
 
-        private void tb_emailReset_Enter(object sender, EventArgs e)
+        private void Tb_emailReset_Enter(object sender, EventArgs e)
         {
             if (tb_emailReset.Text == "Email")
             {
@@ -42,7 +46,7 @@ namespace LoginC01
             }
         }
 
-        private void tb_emailReset_Leave(object sender, EventArgs e)
+        private void Tb_emailReset_Leave(object sender, EventArgs e)
         {
             if (tb_emailReset.Text == "")
             {
@@ -51,7 +55,7 @@ namespace LoginC01
             }
         }
 
-        private void frm_fgpassword_Click(object sender, EventArgs e)
+        private void Frm_fgpassword_Click(object sender, EventArgs e)
         {
             if (tb_emailReset.Text == "")
             {
@@ -60,6 +64,11 @@ namespace LoginC01
             }
 
             ActiveControl = null;
+        }
+
+        private void Frm_fgpassword_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

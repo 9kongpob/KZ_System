@@ -10,16 +10,35 @@ using System.Windows.Forms;
 
 namespace LoginC01
 {
-    public partial class frm_register : Form
+    public partial class Frm_register : Form
     {
-        public frm_register()
+        public Frm_register()
         {
             InitializeComponent();
         }
 
-        private void frm_register_FormClosed(object sender, FormClosedEventArgs e)
+
+        private void Frm_register_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //MessageBox.Show("Show status frm_login : "+frm_login.ActiveForm);
+            Application.Exit();
+        }
+
+        private void Frm_register_Load(object sender, EventArgs e)
+        {
+/*            Frm_login frm_login = new Frm_login();
+
+            this.Hide();
+            frm_login.ShowDialog();
+            this.Close();*/
+        }
+
+        private void Frm_register_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Frm_login frm_login = new Frm_login();
+
+            this.Hide();
+            frm_login.ShowDialog();
+            this.Close();
         }
     }
 }

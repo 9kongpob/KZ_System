@@ -1,6 +1,6 @@
 ﻿namespace LoginC01
 {
-    partial class frm_login
+    partial class Frm_login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_login));
             this.gb_login = new System.Windows.Forms.GroupBox();
             this.tb_password = new System.Windows.Forms.TextBox();
             this.tb_username = new System.Windows.Forms.TextBox();
@@ -60,8 +60,8 @@
             this.tb_password.Size = new System.Drawing.Size(276, 30);
             this.tb_password.TabIndex = 3;
             this.tb_password.UseSystemPasswordChar = true;
-            this.tb_password.Enter += new System.EventHandler(this.tb_password_Enter);
-            this.tb_password.Leave += new System.EventHandler(this.tb_password_Leave);
+            this.tb_password.Enter += new System.EventHandler(this.Tb_password_Enter);
+            this.tb_password.Leave += new System.EventHandler(this.Tb_password_Leave);
             // 
             // tb_username
             // 
@@ -70,8 +70,8 @@
             this.tb_username.Name = "tb_username";
             this.tb_username.Size = new System.Drawing.Size(276, 30);
             this.tb_username.TabIndex = 2;
-            this.tb_username.Enter += new System.EventHandler(this.tb_username_Enter);
-            this.tb_username.Leave += new System.EventHandler(this.tb_username_Leave);
+            this.tb_username.Enter += new System.EventHandler(this.Tb_username_Enter);
+            this.tb_username.Leave += new System.EventHandler(this.Tb_username_Leave);
             // 
             // btn_login
             // 
@@ -92,7 +92,7 @@
             this.btn_signup.TabIndex = 6;
             this.btn_signup.Text = "Sign Up";
             this.btn_signup.UseVisualStyleBackColor = true;
-            this.btn_signup.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btn_signup_MouseClick);
+            this.btn_signup.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Btn_signup_MouseClick);
             // 
             // lb_forgotpass
             // 
@@ -103,9 +103,9 @@
             this.lb_forgotpass.Size = new System.Drawing.Size(156, 17);
             this.lb_forgotpass.TabIndex = 7;
             this.lb_forgotpass.Text = "Forgot Your Password?";
-            this.lb_forgotpass.Click += new System.EventHandler(this.lb_forgotpass_Click);
-            this.lb_forgotpass.MouseEnter += new System.EventHandler(this.lb_forgotpass_MouseEnter);
-            this.lb_forgotpass.MouseLeave += new System.EventHandler(this.lb_forgotpass_MouseLeave);
+            this.lb_forgotpass.Click += new System.EventHandler(this.Lb_forgotpass_Click);
+            this.lb_forgotpass.MouseEnter += new System.EventHandler(this.Lb_forgotpass_MouseEnter);
+            this.lb_forgotpass.MouseLeave += new System.EventHandler(this.Lb_forgotpass_MouseLeave);
             // 
             // pb_logo
             // 
@@ -117,7 +117,7 @@
             this.pb_logo.Size = new System.Drawing.Size(85, 85);
             this.pb_logo.TabIndex = 8;
             this.pb_logo.TabStop = false;
-            this.pb_logo.Click += new System.EventHandler(this.pb_logo_Click);
+            this.pb_logo.Click += new System.EventHandler(this.Pb_logo_Click);
             // 
             // frm_login
             // 
@@ -136,8 +136,8 @@
             this.Name = "frm_login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.frm_login_Load);
-            this.Click += new System.EventHandler(this.frm_login_Click);
+            this.Load += new System.EventHandler(this.Frm_login_Load);
+            this.Click += new System.EventHandler(this.Frm_login_Click);
             this.gb_login.ResumeLayout(false);
             this.gb_login.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).EndInit();

@@ -1,6 +1,6 @@
 ﻿namespace LoginC01
 {
-    partial class frm_fgpassword
+    partial class Frm_fgpassword
     {
         /// <summary>
         /// Required designer variable.
@@ -63,8 +63,8 @@
             this.tb_emailReset.Name = "tb_emailReset";
             this.tb_emailReset.Size = new System.Drawing.Size(323, 30);
             this.tb_emailReset.TabIndex = 2;
-            this.tb_emailReset.Enter += new System.EventHandler(this.tb_emailReset_Enter);
-            this.tb_emailReset.Leave += new System.EventHandler(this.tb_emailReset_Leave);
+            this.tb_emailReset.Enter += new System.EventHandler(this.Tb_emailReset_Enter);
+            this.tb_emailReset.Leave += new System.EventHandler(this.Tb_emailReset_Leave);
             // 
             // bn_sendEmailReset
             // 
@@ -103,9 +103,10 @@
             this.Name = "frm_fgpassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Forgot Your Password?";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_fgpassword_FormClosed);
-            this.Load += new System.EventHandler(this.frm_fgpassword_Load);
-            this.Click += new System.EventHandler(this.frm_fgpassword_Click);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_fgpassword_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_fgpassword_FormClosed);
+            this.Load += new System.EventHandler(this.Frm_fgpassword_Load);
+            this.Click += new System.EventHandler(this.Frm_fgpassword_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pb_email_ico)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
