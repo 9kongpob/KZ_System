@@ -19,79 +19,79 @@ namespace LoginC01
 
         private void Tb_username_Enter(object sender, EventArgs e)
         {
-            if (tb_username.Text == "Enter Your Username")
+            if (Tb_username.Text == "Enter Your Username")
             {
-                tb_username.Text = "";
+                Tb_username.Text = "";
             }
         }
 
         private void Tb_username_Leave(object sender, EventArgs e)
         {
-            if (tb_username.Text == "")
+            if (Tb_username.Text == "")
             {
-                tb_username.Text = "Enter Your Username";
-                tb_username.TextAlign = HorizontalAlignment.Center;
-                tb_username.ForeColor = Color.Gray;
+                Tb_username.Text = "Enter Your Username";
+                Tb_username.TextAlign = HorizontalAlignment.Center;
+                Tb_username.ForeColor = Color.Gray;
             }
         }
 
         private void Tb_password_Enter(object sender, EventArgs e)
         {
-            if (tb_password.Text == "********")
+            if (Tb_password.Text == "********")
             {
-                tb_password.Text = "";
+                Tb_password.Text = "";
             }
         }
 
         private void Tb_password_Leave(object sender, EventArgs e)
         {
-            if (tb_password.Text == "")
+            if (Tb_password.Text == "")
             {
-                tb_password.Text = "********";
-                tb_password.TextAlign = HorizontalAlignment.Center;
-                tb_password.ForeColor = Color.Gray;
+                Tb_password.Text = "********";
+                Tb_password.TextAlign = HorizontalAlignment.Center;
+                Tb_password.ForeColor = Color.Gray;
             }
         }
 
         private void Frm_login_Load(object sender, EventArgs e)
         {
-            tb_username.Text = "Enter Your Username";
-            tb_username.TextAlign = HorizontalAlignment.Center;
-            tb_username.ForeColor = Color.Gray;
+            Tb_username.Text = "Enter Your Username";
+            Tb_username.TextAlign = HorizontalAlignment.Center;
+            Tb_username.ForeColor = Color.Gray;
 
-            tb_password.Text = "********";
-            tb_password.TextAlign = HorizontalAlignment.Center;
-            tb_password.ForeColor = Color.Gray;
+            Tb_password.Text = "********";
+            Tb_password.TextAlign = HorizontalAlignment.Center;
+            Tb_password.ForeColor = Color.Gray;
 
         }
 
         private void Lb_forgotpass_MouseEnter(object sender, EventArgs e)
         {
-            lb_forgotpass.ForeColor = Color.Blue;
-            lb_forgotpass.Font = new Font(lb_forgotpass.Font, FontStyle.Underline);
+            Lb_forgotpass.ForeColor = Color.Blue;
+            Lb_forgotpass.Font = new Font(Lb_forgotpass.Font, FontStyle.Underline);
 
         }
 
         private void Lb_forgotpass_MouseLeave(object sender, EventArgs e)
         {
-            lb_forgotpass.ForeColor = Color.Black;
-            lb_forgotpass.Font = new Font(lb_forgotpass.Font, FontStyle.Regular);
+            Lb_forgotpass.ForeColor = Color.Black;
+            Lb_forgotpass.Font = new Font(Lb_forgotpass.Font, FontStyle.Regular);
         }
 
         private void Frm_login_Click(object sender, EventArgs e)
         {
 
-            if (tb_password.Text == "")
+            if (Tb_password.Text == "")
             {
-                tb_password.Text = "********";
-                tb_password.TextAlign = HorizontalAlignment.Center;
-                tb_password.ForeColor = Color.Gray;
+                Tb_password.Text = "********";
+                Tb_password.TextAlign = HorizontalAlignment.Center;
+                Tb_password.ForeColor = Color.Gray;
             }
-            if (tb_username.Text == "")
+            if (Tb_username.Text == "")
             {
-                tb_username.Text = "Enter Your Username";
-                tb_username.TextAlign = HorizontalAlignment.Center;
-                tb_username.ForeColor = Color.Gray;
+                Tb_username.Text = "Enter Your Username";
+                Tb_username.TextAlign = HorizontalAlignment.Center;
+                Tb_username.ForeColor = Color.Gray;
             }
 
             ActiveControl = null;
@@ -108,17 +108,17 @@ namespace LoginC01
 
         private void Pb_logo_Click(object sender, EventArgs e)
         {
-            if (tb_password.Text == "")
+            if (Tb_password.Text == "")
             {
-                tb_password.Text = "********";
-                tb_password.TextAlign = HorizontalAlignment.Center;
-                tb_password.ForeColor = Color.Gray;
+                Tb_password.Text = "********";
+                Tb_password.TextAlign = HorizontalAlignment.Center;
+                Tb_password.ForeColor = Color.Gray;
             }
-            if (tb_username.Text == "")
+            if (Tb_username.Text == "")
             {
-                tb_username.Text = "Enter Your Username";
-                tb_username.TextAlign = HorizontalAlignment.Center;
-                tb_username.ForeColor = Color.Gray;
+                Tb_username.Text = "Enter Your Username";
+                Tb_username.TextAlign = HorizontalAlignment.Center;
+                Tb_username.ForeColor = Color.Gray;
             }
 
             ActiveControl = null;
@@ -133,10 +133,10 @@ namespace LoginC01
 
         }
 
-        private void btn_login_Click(object sender, EventArgs e)
+        private void Btn_login_Click(object sender, EventArgs e)
         {
             MessageBox.Show("You Login With" +
-                "\nUsername : " + tb_username.Text);
+                "\nUsername : " + Tb_username.Text);
         }
     }
 }

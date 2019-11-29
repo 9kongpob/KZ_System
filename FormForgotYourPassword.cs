@@ -15,7 +15,6 @@ namespace LoginC01
         public Frm_fgpassword()
         {
             InitializeComponent();
-
         }
 
         private void Frm_fgpassword_FormClosed(object sender, FormClosedEventArgs e)
@@ -33,34 +32,34 @@ namespace LoginC01
         private void Frm_fgpassword_Load(object sender, EventArgs e)
         {
 
-            tb_emailReset.Text = "Email";
-            tb_emailReset.ForeColor = Color.Gray;
+            Tb_emailReset.Text = "Email";
+            Tb_emailReset.ForeColor = Color.Gray;
 
         }
 
         private void Tb_emailReset_Enter(object sender, EventArgs e)
         {
-            if (tb_emailReset.Text == "Email")
+            if (Tb_emailReset.Text == "Email")
             {
-                tb_emailReset.Text = "";
+                Tb_emailReset.Text = "";
             }
         }
 
         private void Tb_emailReset_Leave(object sender, EventArgs e)
         {
-            if (tb_emailReset.Text == "")
+            if (Tb_emailReset.Text == "")
             {
-                tb_emailReset.Text = "Email";
-                tb_emailReset.ForeColor = Color.Gray;
+                Tb_emailReset.Text = "Email";
+                Tb_emailReset.ForeColor = Color.Gray;
             }
         }
 
         private void Frm_fgpassword_Click(object sender, EventArgs e)
         {
-            if (tb_emailReset.Text == "")
+            if (Tb_emailReset.Text == "")
             {
-                tb_emailReset.Text = "Email";
-                tb_emailReset.ForeColor = Color.Gray;
+                Tb_emailReset.Text = "Email";
+                Tb_emailReset.ForeColor = Color.Gray;
             }
 
             ActiveControl = null;
