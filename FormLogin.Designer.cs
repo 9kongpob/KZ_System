@@ -82,6 +82,7 @@
             this.btn_login.TabIndex = 0;
             this.btn_login.Text = "Login";
             this.btn_login.UseVisualStyleBackColor = true;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // btn_signup
             // 
@@ -119,7 +120,7 @@
             this.pb_logo.TabStop = false;
             this.pb_logo.Click += new System.EventHandler(this.Pb_logo_Click);
             // 
-            // frm_login
+            // Frm_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -133,7 +134,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frm_login";
+            this.Name = "Frm_login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Frm_login_Load);
