@@ -96,6 +96,9 @@ namespace LoginC01
                 {
                     EmailSender(Tb_emailReset.Text);
                     MessageBox.Show("Recover password to your email.");
+
+                    Application.Exit();
+
                 }
             }
             else
@@ -134,7 +137,7 @@ namespace LoginC01
                 "Tel : 038-185566 to 70\n" +
                 "Mobile: 098-8167915  E-mail : kongpop@siwt.co.th";
 
-            var credential = new NetworkCredential(emailFrom, "");
+            var credential = new NetworkCredential(emailFrom, "Kon@2019");
             var smtpClient = new SmtpClient();
             smtpClient.Port = 25;
             smtpClient.UseDefaultCredentials = false;
