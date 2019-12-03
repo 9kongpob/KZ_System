@@ -75,6 +75,7 @@
             this.Btn_sendEmailReset.TabIndex = 3;
             this.Btn_sendEmailReset.Text = "Send";
             this.Btn_sendEmailReset.UseVisualStyleBackColor = true;
+            this.Btn_sendEmailReset.Click += new System.EventHandler(this.Btn_sendEmailReset_Click);
             // 
             // Pb_email_ico
             // 

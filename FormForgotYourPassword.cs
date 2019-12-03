@@ -69,5 +69,25 @@ namespace LoginC01
         {
             Application.Exit();
         }
+
+        private void Btn_sendEmailReset_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Check Email : " + Tb_emailReset.Text);
+
+/*            if (Tb_emailReset.Text == "")
+            {
+                MessageBox.Show("Please enter your email address in format:\n " +
+                    "yourname@example.com");
+
+            }else if (Tb_emailReset.Text != "")
+            {
+                MessageBox.Show("Incorrect username or password.");
+            }
+            else
+            {
+                MessageBox.Show("Sending new password to email.");
+            }*/
+            
+        }
     }
 }
