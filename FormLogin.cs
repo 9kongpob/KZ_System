@@ -22,6 +22,7 @@ namespace LoginC01
             if (Tb_username.Text == "Enter Your Username")
             {
                 Tb_username.Text = "";
+                Tb_username.ForeColor = Color.Black;
             }
         }
 
@@ -40,6 +41,7 @@ namespace LoginC01
             if (Tb_password.Text == "********")
             {
                 Tb_password.Text = "";
+                Tb_password.ForeColor = Color.Black;
             }
         }
 
