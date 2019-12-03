@@ -89,17 +89,15 @@ namespace LoginC01
                 if (!isValid)
                 {
                     MessageBox.Show("Invalid Email.");
-
                 }
                 else
                 {
-                    MessageBox.Show("Sending new password to email.");
+                    MessageBox.Show("Recover password to your email.");
                 }
-
             }
             else
             {
-                //MessageBox.Show("Sending new password to email.");
+                //MessageBox.Show("Recover password to your email.");
             }
 
         }
