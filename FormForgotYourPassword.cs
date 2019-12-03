@@ -73,7 +73,7 @@ namespace LoginC01
 
         private void Btn_sendEmailReset_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Check Email : " + Tb_emailReset.Text);
+            //MessageBox.Show("Check Email : " + Tb_emailReset.Text);
 
             if (Tb_emailReset.Text == "Email")
             {
@@ -90,11 +90,15 @@ namespace LoginC01
                     MessageBox.Show("Invalid Email.");
 
                 }
+                else
+                {
+                    MessageBox.Show("Sending new password to email.");
+                }
 
             }
             else
             {
-                MessageBox.Show("Sending new password to email.");
+                //MessageBox.Show("Sending new password to email.");
             }
 
         }
