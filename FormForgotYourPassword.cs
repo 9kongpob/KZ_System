@@ -104,6 +104,9 @@ namespace LoginC01
 
         }
 
-
+        private void Pb_email_ico_Click(object sender, EventArgs e)
+        {
+            Btn_sendEmailReset_Click(sender, e);
+        }
     }
 }

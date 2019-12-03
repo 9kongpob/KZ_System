@@ -83,11 +83,13 @@
             this.Pb_email_ico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Pb_email_ico.BackgroundImage = global::LoginC01.Properties.Resources.email1;
             this.Pb_email_ico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Pb_email_ico.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Pb_email_ico.Location = new System.Drawing.Point(246, 175);
             this.Pb_email_ico.Name = "Pb_email_ico";
             this.Pb_email_ico.Size = new System.Drawing.Size(22, 21);
             this.Pb_email_ico.TabIndex = 4;
             this.Pb_email_ico.TabStop = false;
+            this.Pb_email_ico.Click += new System.EventHandler(this.Pb_email_ico_Click);
             // 
             // Frm_fgpassword
             // 
