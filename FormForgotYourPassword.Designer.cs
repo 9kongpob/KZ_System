@@ -1,4 +1,6 @@
-﻿namespace LoginC01
+﻿using System;
+
+namespace LoginC01
 {
     partial class Frm_fgpassword
     {
@@ -32,9 +34,7 @@
             this.Lb_fgps_main = new System.Windows.Forms.Label();
             this.Lb_fgps_submain = new System.Windows.Forms.Label();
             this.Tb_emailReset = new System.Windows.Forms.TextBox();
-            this.Btn_sendEmailReset = new System.Windows.Forms.Button();
-            this.Pb_email_ico = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.Pb_email_ico)).BeginInit();
+            this.Btn_RecoverPassword = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Lb_fgps_main
@@ -67,37 +67,23 @@
             this.Tb_emailReset.Enter += new System.EventHandler(this.Tb_emailReset_Enter);
             this.Tb_emailReset.Leave += new System.EventHandler(this.Tb_emailReset_Leave);
             // 
-            // Btn_sendEmailReset
+            // Btn_RecoverPassword
             // 
-            this.Btn_sendEmailReset.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_sendEmailReset.Location = new System.Drawing.Point(217, 162);
-            this.Btn_sendEmailReset.Name = "Btn_sendEmailReset";
-            this.Btn_sendEmailReset.Size = new System.Drawing.Size(142, 46);
-            this.Btn_sendEmailReset.TabIndex = 3;
-            this.Btn_sendEmailReset.Text = "Send";
-            this.Btn_sendEmailReset.UseVisualStyleBackColor = true;
-            this.Btn_sendEmailReset.Click += new System.EventHandler(this.Btn_sendEmailReset_Click);
-            // 
-            // Pb_email_ico
-            // 
-            this.Pb_email_ico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Pb_email_ico.BackgroundImage = global::LoginC01.Properties.Resources.email1;
-            this.Pb_email_ico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Pb_email_ico.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Pb_email_ico.Location = new System.Drawing.Point(246, 175);
-            this.Pb_email_ico.Name = "Pb_email_ico";
-            this.Pb_email_ico.Size = new System.Drawing.Size(22, 21);
-            this.Pb_email_ico.TabIndex = 4;
-            this.Pb_email_ico.TabStop = false;
-            this.Pb_email_ico.Click += new System.EventHandler(this.Pb_email_ico_Click);
+            this.Btn_RecoverPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_RecoverPassword.Location = new System.Drawing.Point(36, 162);
+            this.Btn_RecoverPassword.Name = "Btn_RecoverPassword";
+            this.Btn_RecoverPassword.Size = new System.Drawing.Size(323, 46);
+            this.Btn_RecoverPassword.TabIndex = 3;
+            this.Btn_RecoverPassword.Text = "Recover Password";
+            this.Btn_RecoverPassword.UseVisualStyleBackColor = true;
+            this.Btn_RecoverPassword.Click += new System.EventHandler(this.Btn_RecoverPassword_Click);
             // 
             // Frm_fgpassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(397, 220);
-            this.Controls.Add(this.Pb_email_ico);
-            this.Controls.Add(this.Btn_sendEmailReset);
+            this.Controls.Add(this.Btn_RecoverPassword);
             this.Controls.Add(this.Tb_emailReset);
             this.Controls.Add(this.Lb_fgps_submain);
             this.Controls.Add(this.Lb_fgps_main);
@@ -112,18 +98,18 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_fgpassword_FormClosed);
             this.Load += new System.EventHandler(this.Frm_fgpassword_Load);
             this.Click += new System.EventHandler(this.Frm_fgpassword_Click);
-            ((System.ComponentModel.ISupportInitialize)(this.Pb_email_ico)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
+
 
         #endregion
 
         private System.Windows.Forms.Label Lb_fgps_main;
         private System.Windows.Forms.Label Lb_fgps_submain;
         private System.Windows.Forms.TextBox Tb_emailReset;
-        private System.Windows.Forms.Button Btn_sendEmailReset;
-        private System.Windows.Forms.PictureBox Pb_email_ico;
+        private System.Windows.Forms.Button Btn_RecoverPassword;
+
     }
 }
