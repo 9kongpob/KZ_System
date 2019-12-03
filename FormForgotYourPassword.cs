@@ -80,9 +80,11 @@ namespace LoginC01
         public void EmailSender(string email)
         {
             
-            MessageBox.Show("Check Function Sender show email : " + email);
+            //MessageBox.Show("Check Function Sender show email : " + email);
+
             String emailFrom = "kongpop@siwt.co.th";
             String strMsg;
+            String passwordRecover = "P@ssw0rd";
 
             var myMail = new MailMessage();
             myMail.From = new MailAddress("IT Engineer<"+emailFrom+">");
@@ -91,37 +93,20 @@ namespace LoginC01
             myMail.To.Add(new MailAddress(email));
             myMail.IsBodyHtml = true;
             myMail.BodyEncoding = System.Text.Encoding.UTF8;
-/*            myMail.Body = "Recover password System from IT\n" +
-                "Test Send mail\n\n\n" +
-                "Thank You and Best Regards,\n" +
-                "Mr.Kongpob Kunchanuan\n" +
-                "IT Engineer\n" +
-                "Shinba Iron Works (Thailand) Co.,Ltd. (SIWT)\n" +
-                "Amata City Chonburi Industrial Estate\n" +
-                "700/746 Moo 1 T.Phanthong, A.Phanthong, Chonburi 20160,Thailand\n" +
-                "Tel : 038-185566 to 70\n" +
-                "Mobile: 098-8167915  E-mail : kongpop@siwt.co.th";*/
 
             strMsg = "";
-            strMsg = strMsg + "<h1>Recover password System from IT</h1><br>";
-            strMsg = strMsg + " <tr>";
-            strMsg = strMsg + " <td><div align='center'><strong>My Message </strong></div></td>";
-            strMsg = strMsg + " <td><div align='center'><font color='red'>My Message</font></div></td>";
-            strMsg = strMsg + " <td><div align='center'><font size='2'>My Message</font></div></td>";
-            strMsg = strMsg + " </tr>";
-            strMsg = strMsg + " <tr>";
-            strMsg = strMsg + " <td><div align='center'>My Message</div></td>";
-            strMsg = strMsg + " <td><div align='center'>My Message</div></td>";
-            strMsg = strMsg + " <td><div align='center'>My Message</div></td>";
-            strMsg = strMsg + " </tr>";
-            strMsg = strMsg + " <tr>";
-            strMsg = strMsg + " <td><div align='center'>" + DateTime.Now.ToString() + "</div></td>";
-            strMsg = strMsg + " <td><div align='center'>" + DateTime.Now.ToString() + "</div></td>";
-            strMsg = strMsg + " <td><div align='center'>" + DateTime.Now.ToString() + "</div></td>";
-            strMsg = strMsg + " </tr>";
-            strMsg = strMsg + "</table>";
+            strMsg = strMsg + "<p> Recovery your password,</p>";
+            strMsg = strMsg + "<p> &nbsp;</p>";
+            strMsg = strMsg + "<p> Your password recovery was successful.</p>";
+            strMsg = strMsg + "<p> Date : "+ DateTime.Now.ToString() + "&nbsp;</p>";
+            strMsg = strMsg + "<p> As you have requested password recovery to system. <br> The IT has received the recovery request.</p>";
+            strMsg = strMsg + "<p> Password : "+ passwordRecover +" </p>";
+            strMsg = strMsg + "<p> &nbsp;</p>";
+            strMsg = strMsg + "<p> This is an automatic AI system. Please don't reply <br> Should you have any question, please feel free to contact me.</p>";
+            strMsg = strMsg + "<p> --------------------------------------------</p>";
+            strMsg = strMsg + "<p> Thank you and Best Regards,</p>"; 
+            strMsg = strMsg + "<p> Mr.Kongpop Kunchanuan <br> IT Engineer <br> Email : kongpop@siwt.co.th <br> Mobile : +669 8816 7915</p>";
 
-            //myMail.BodyFormat = MailFormat.Html;
             myMail.Body = strMsg;
 
             var credential = new NetworkCredential(emailFrom, "Kon@2019");
