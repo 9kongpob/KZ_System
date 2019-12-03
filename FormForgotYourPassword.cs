@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Net;
+using System.Net.Mail;
 
 namespace LoginC01
 {
@@ -92,6 +94,7 @@ namespace LoginC01
                 }
                 else
                 {
+                    EmailSender(Tb_emailReset.Text);
                     MessageBox.Show("Recover password to your email.");
                 }
             }
@@ -105,6 +108,38 @@ namespace LoginC01
         private void Pb_email_ico_Click(object sender, EventArgs e)
         {
             Btn_sendEmailReset_Click(sender, e);
+        }
+
+        public void EmailSender(string email)
+        {
+            
+            MessageBox.Show("Check Function Sender show email : " + email);
+
+            var myMail = new MailMessage();
+            myMail.From = new MailAddress("IT Engineer<kongpop@siwt.co.th>");
+
+            myMail.Subject = "Recover Password System from IT";
+            myMail.To.Add(new MailAddress(email));
+            myMail.IsBodyHtml = true;
+            myMail.BodyEncoding = System.Text.Encoding.UTF8;
+            myMail.Body = "Recover password System from IT\n" +
+                "Test Send mail\n\n\n" +
+                "Thank You and Best Regards,\n" +
+                "Mr.Kongpob Kunchanuan\n" +
+                "IT Engineer\n" +
+                "Shinba Iron Works (Thailand) Co.,Ltd. (SIWT)\n" +
+                "Amata City Chonburi Industrial Estate\n" +
+                "700/746 Moo 1 T.Phanthong, A.Phanthong, Chonburi 20160,Thailand\n" +
+                "Tel : 038-185566 to 70\n" +
+                "Mobile: 098-8167915  E-mail : kongpop@siwt.co.th";
+
+            
+
+            var smtpClient = new SmtpClient("mail.siwt.co.th", 587);
+            smtpClient.Send(myMail);
+
+            smtpClient.Dispose();
+            myMail.Dispose();
         }
     }
 }
