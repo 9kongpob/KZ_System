@@ -43,6 +43,7 @@ namespace LoginC01
             if (Tb_emailReset.Text == "Email")
             {
                 Tb_emailReset.Text = "";
+                Tb_emailReset.ForeColor = Color.Black;
             }
         }
 
@@ -102,6 +103,7 @@ namespace LoginC01
             }
 
         }
+
 
     }
 }
