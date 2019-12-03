@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_fgpassword));
             this.Lb_fgps_main = new System.Windows.Forms.Label();
             this.Lb_fgps_submain = new System.Windows.Forms.Label();
             this.Tb_emailReset = new System.Windows.Forms.TextBox();
@@ -99,6 +100,7 @@
             this.Controls.Add(this.Lb_fgps_submain);
             this.Controls.Add(this.Lb_fgps_main);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Frm_fgpassword";

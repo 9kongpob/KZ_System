@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace LoginC01
 {
@@ -74,20 +75,29 @@ namespace LoginC01
         {
             MessageBox.Show("Check Email : " + Tb_emailReset.Text);
 
-/*            if (Tb_emailReset.Text == "")
+            if (Tb_emailReset.Text == "Email")
             {
                 MessageBox.Show("Please enter your email address in format:\n " +
                     "yourname@example.com");
 
-            }else if (Tb_emailReset.Text != "")
+            }
+            else if (Tb_emailReset.Text != "Email")
             {
-                MessageBox.Show("Incorrect username or password.");
+                Regex regex = new Regex(@"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
+                bool isValid = regex.IsMatch(Tb_emailReset.Text.Trim());
+                if (!isValid)
+                {
+                    MessageBox.Show("Invalid Email.");
+
+                }
+
             }
             else
             {
                 MessageBox.Show("Sending new password to email.");
-            }*/
-            
+            }
+
         }
+
     }
 }
