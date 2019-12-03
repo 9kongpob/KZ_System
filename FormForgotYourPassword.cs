@@ -114,9 +114,10 @@ namespace LoginC01
         {
             
             MessageBox.Show("Check Function Sender show email : " + email);
+            string emailFrom = "kongpop@siwt.co.th";
 
             var myMail = new MailMessage();
-            myMail.From = new MailAddress("IT Engineer<kongpop@siwt.co.th>");
+            myMail.From = new MailAddress("IT Engineer<"+emailFrom+">");
 
             myMail.Subject = "Recover Password System from IT";
             myMail.To.Add(new MailAddress(email));
@@ -133,9 +134,16 @@ namespace LoginC01
                 "Tel : 038-185566 to 70\n" +
                 "Mobile: 098-8167915  E-mail : kongpop@siwt.co.th";
 
-            
+            var credential = new NetworkCredential(emailFrom, "");
+            var smtpClient = new SmtpClient();
+            smtpClient.Port = 25;
+            smtpClient.UseDefaultCredentials = false;
+            smtpClient.Credentials = credential;
+            smtpClient.Host = "mail.siwt.co.th";
+            smtpClient.EnableSsl = false;
 
-            var smtpClient = new SmtpClient("mail.siwt.co.th", 587);
+            //var smtpClient = new SmtpClient("mail.siwt.co.th", 587);
+
             smtpClient.Send(myMail);
 
             smtpClient.Dispose();
