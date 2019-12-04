@@ -74,9 +74,6 @@ namespace LoginC01
             Application.Exit();
         }
 
-    
-
-
         public void EmailSender(string email)
         {
             
@@ -158,6 +155,17 @@ namespace LoginC01
             }
 
             
+        }
+
+        private void Tb_emailReset_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Btn_RecoverPassword.PerformClick();
+            }else if (e.KeyCode == Keys.Escape)
+            {
+                Tb_emailReset.Text = "";
+            }
         }
     }
 }

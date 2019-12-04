@@ -65,6 +65,7 @@ namespace LoginC01
             this.Tb_emailReset.Size = new System.Drawing.Size(323, 30);
             this.Tb_emailReset.TabIndex = 2;
             this.Tb_emailReset.Enter += new System.EventHandler(this.Tb_emailReset_Enter);
+            this.Tb_emailReset.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Tb_emailReset_KeyDown);
             this.Tb_emailReset.Leave += new System.EventHandler(this.Tb_emailReset_Leave);
             // 
             // Btn_RecoverPassword
