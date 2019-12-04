@@ -8,7 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 using System.IO;
+
 
 namespace LoginC01
 {
@@ -164,10 +166,13 @@ namespace LoginC01
 
                 if (intNumRows > 0)
                 {
+                    Debug.WriteLine("Connecting Server Database...");
+                    Debug.WriteLine("Connected Server Database");
                     MessageBox.Show("Connected Server Database.","Connect Data");
                 }
                 else
                 {
+                    Debug.WriteLine("Sorry, Unable to connect to the server.");
                     MessageBox.Show("Unable to connect to the server.","Connect Data");
                 }
                 objConn.Close();
