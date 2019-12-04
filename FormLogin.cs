@@ -168,7 +168,7 @@ namespace LoginC01
                 }
                 else
                 {
-
+                    MessageBox.Show("Unable to connect to the server.","Connect Data");
                 }
                 objConn.Close();
                 objConn = null;
