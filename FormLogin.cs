@@ -137,8 +137,45 @@ namespace LoginC01
 
         private void Btn_login_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You Login With" +
+            
+
+            if (Tb_username.Text != "Enter Your Username" && Tb_password.Text != "********")
+            {
+                MessageBox.Show("You Login With" +
                 "\nUsername : " + Tb_username.Text);
+            }
+            else if (Tb_username.Text == "Enter Your Username" && Tb_password.Text != "********")
+            {
+                MessageBox.Show("No Value in Username.");
+            }
+            else if (Tb_username.Text != "Enter Your Username" && Tb_password.Text == "********")
+            {
+                MessageBox.Show("No Value in Password.");
+            }
+            else
+            {
+                MessageBox.Show("No Value in Username and Password.");
+            }
+        }
+
+        private void Tb_password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Btn_login.PerformClick();
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                Pb_logo_Click(sender, e);
+            }
+        }
+
+        private void Tb_username_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Pb_logo_Click(sender, e);
+            }
         }
     }
 }

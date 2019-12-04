@@ -61,6 +61,7 @@
             this.Tb_password.TabIndex = 3;
             this.Tb_password.UseSystemPasswordChar = true;
             this.Tb_password.Enter += new System.EventHandler(this.Tb_password_Enter);
+            this.Tb_password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Tb_password_KeyDown);
             this.Tb_password.Leave += new System.EventHandler(this.Tb_password_Leave);
             // 
             // Tb_username
@@ -71,6 +72,7 @@
             this.Tb_username.Size = new System.Drawing.Size(276, 30);
             this.Tb_username.TabIndex = 2;
             this.Tb_username.Enter += new System.EventHandler(this.Tb_username_Enter);
+            this.Tb_username.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Tb_username_KeyDown);
             this.Tb_username.Leave += new System.EventHandler(this.Tb_username_Leave);
             // 
             // Btn_login
