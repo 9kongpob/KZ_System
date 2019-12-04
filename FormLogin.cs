@@ -166,8 +166,11 @@ namespace LoginC01
 
                 if (intNumRows > 0)
                 {
+                    Debug.WriteLine("Connecting.");
+                    Debug.WriteLine("Connecting..");
+                    Debug.WriteLine("Connecting...");
                     Debug.WriteLine("Connecting Server Database...");
-                    Debug.WriteLine("Connected Server Database");
+                    Debug.WriteLine("Success. ---> Connected Server Database.");
                     MessageBox.Show("Connected Server Database.","Connect Data");
                 }
                 else
