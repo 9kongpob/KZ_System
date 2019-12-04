@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace LoginC01
 {
@@ -141,8 +143,39 @@ namespace LoginC01
 
             if (Tb_username.Text != "Enter Your Username" && Tb_password.Text != "********")
             {
-                MessageBox.Show("You Login With" +
-                "\nUsername : " + Tb_username.Text);
+                MessageBox.Show("Username : " + Tb_username.Text,"You Login With");
+
+                //---------------ConnectDataBase-----------------
+                SqlConnection objConn = new SqlConnection();
+                SqlCommand objCmd = new SqlCommand();
+                string strConnString = null;
+                string strSQL = null;
+
+                strConnString = "Server=192.168.2.115;UID=sa;PASSWORD=siwt-2017;Database=test;Max Pool Size = 100;Connect Timeout = 5;";
+                objConn.ConnectionString = strConnString;
+                objConn.Open();
+
+                int intNumRows = 0;
+                strSQL = "SELECT COUNT(*) FROM [dbo].[tbUser] WHERE Username = '" + 
+                    this.Tb_username.Text + "' AND Password = '" + 
+                    this.Tb_password.Text + "' ";
+                objCmd = new SqlCommand(strSQL, objConn);
+                intNumRows = Convert.ToInt32(objCmd.ExecuteScalar());
+
+                if (intNumRows > 0)
+                {
+                    MessageBox.Show("Connected Server Database.","Connect Data");
+                }
+                else
+                {
+
+                }
+                objConn.Close();
+                objConn = null;
+
+        //-----------------------------------------------
+
+
             }
             else if (Tb_username.Text == "Enter Your Username" && Tb_password.Text != "********")
             {
