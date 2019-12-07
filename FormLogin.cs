@@ -172,6 +172,9 @@ namespace LoginC01
                     Debug.WriteLine("Connecting Server Database...");
                     Debug.WriteLine("Success. ---> Connected Server Database.");
                     MessageBox.Show("Connected Server Database.","Connect Data");
+
+                    //check access new form FormMain
+
                 }
                 else
                 {
