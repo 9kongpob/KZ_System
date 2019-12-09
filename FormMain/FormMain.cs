@@ -16,6 +16,7 @@ namespace FormMain
     {
 
         string emailUser;
+        int frmActivated = 1;
 
         public FormMain()
         {
@@ -94,12 +95,14 @@ namespace FormMain
 
         private void FormMain_Activated(object sender, EventArgs e)
         {
-            this.Text = "KZ System : Activated";
+            frmActivated = 1;
+            this.Text = "KZ System : Activated || Value : " + frmActivated;
         }
 
         private void FormMain_Deactivate(object sender, EventArgs e)
         {
-            this.Text = "KZ System : Deactivated";
+            frmActivated = 0;
+            this.Text = "KZ System : Deactivated || Value : " + frmActivated;
         }
     }
 }
