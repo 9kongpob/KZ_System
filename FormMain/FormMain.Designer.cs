@@ -30,28 +30,63 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.MenuTab = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.lb_developby = new System.Windows.Forms.Label();
+            this.lb_version_system = new System.Windows.Forms.Label();
             this.logo_system = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.logo_factory = new System.Windows.Forms.PictureBox();
-            this.version_system = new System.Windows.Forms.Label();
-            this.developby = new System.Windows.Forms.Label();
             this.MenuTab.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo_system)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo_factory)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuTab
             // 
             this.MenuTab.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.MenuTab.Controls.Add(this.developby);
-            this.MenuTab.Controls.Add(this.version_system);
+            this.MenuTab.Controls.Add(this.lb_developby);
+            this.MenuTab.Controls.Add(this.lb_version_system);
             this.MenuTab.Controls.Add(this.logo_system);
             this.MenuTab.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuTab.Location = new System.Drawing.Point(0, 0);
             this.MenuTab.Name = "MenuTab";
             this.MenuTab.Size = new System.Drawing.Size(328, 853);
             this.MenuTab.TabIndex = 0;
+            // 
+            // lb_developby
+            // 
+            this.lb_developby.AutoSize = true;
+            this.lb_developby.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lb_developby.Location = new System.Drawing.Point(8, 816);
+            this.lb_developby.Name = "lb_developby";
+            this.lb_developby.Size = new System.Drawing.Size(213, 17);
+            this.lb_developby.TabIndex = 1;
+            this.lb_developby.Text = "Since 2019, Develop By IT SIWT";
+            this.lb_developby.MouseEnter += new System.EventHandler(this.lb_developby_MouseEnter);
+            this.lb_developby.MouseLeave += new System.EventHandler(this.lb_developby_MouseLeave);
+            // 
+            // lb_version_system
+            // 
+            this.lb_version_system.AutoSize = true;
+            this.lb_version_system.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lb_version_system.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lb_version_system.Location = new System.Drawing.Point(8, 792);
+            this.lb_version_system.Name = "lb_version_system";
+            this.lb_version_system.Size = new System.Drawing.Size(164, 17);
+            this.lb_version_system.TabIndex = 1;
+            this.lb_version_system.Text = "KZ System Version 0.0.1";
+            this.lb_version_system.Click += new System.EventHandler(this.version_system_Click);
+            this.lb_version_system.MouseEnter += new System.EventHandler(this.version_system_MouseEnter);
+            this.lb_version_system.MouseLeave += new System.EventHandler(this.lb_version_system_MouseLeave);
+            // 
+            // logo_system
+            // 
+            this.logo_system.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.logo_system.Location = new System.Drawing.Point(8, 8);
+            this.logo_system.Name = "logo_system";
+            this.logo_system.Size = new System.Drawing.Size(312, 64);
+            this.logo_system.TabIndex = 0;
+            this.logo_system.TabStop = false;
             // 
             // panel1
             // 
@@ -63,15 +98,6 @@
             this.panel1.Size = new System.Drawing.Size(1154, 80);
             this.panel1.TabIndex = 1;
             // 
-            // logo_system
-            // 
-            this.logo_system.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.logo_system.Location = new System.Drawing.Point(8, 8);
-            this.logo_system.Name = "logo_system";
-            this.logo_system.Size = new System.Drawing.Size(312, 64);
-            this.logo_system.TabIndex = 0;
-            this.logo_system.TabStop = false;
-            // 
             // logo_factory
             // 
             this.logo_factory.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -80,26 +106,6 @@
             this.logo_factory.Size = new System.Drawing.Size(312, 64);
             this.logo_factory.TabIndex = 0;
             this.logo_factory.TabStop = false;
-            // 
-            // version_system
-            // 
-            this.version_system.AutoSize = true;
-            this.version_system.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.version_system.Location = new System.Drawing.Point(8, 792);
-            this.version_system.Name = "version_system";
-            this.version_system.Size = new System.Drawing.Size(164, 17);
-            this.version_system.TabIndex = 1;
-            this.version_system.Text = "KZ System Version 0.0.1";
-            // 
-            // developby
-            // 
-            this.developby.AutoSize = true;
-            this.developby.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.developby.Location = new System.Drawing.Point(8, 816);
-            this.developby.Name = "developby";
-            this.developby.Size = new System.Drawing.Size(213, 17);
-            this.developby.TabIndex = 1;
-            this.developby.Text = "Since 2019, Develop By IT SIWT";
             // 
             // FormMain
             // 
@@ -119,8 +125,8 @@
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.MenuTab.ResumeLayout(false);
             this.MenuTab.PerformLayout();
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logo_system)).EndInit();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logo_factory)).EndInit();
             this.ResumeLayout(false);
 
@@ -132,8 +138,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox logo_system;
         private System.Windows.Forms.PictureBox logo_factory;
-        private System.Windows.Forms.Label developby;
-        private System.Windows.Forms.Label version_system;
+        private System.Windows.Forms.Label lb_developby;
+        private System.Windows.Forms.Label lb_version_system;
     }
 }
 

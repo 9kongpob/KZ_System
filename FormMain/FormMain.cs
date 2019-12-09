@@ -23,11 +23,48 @@ namespace FormMain
         private void FormMain_Load(object sender, EventArgs e)
         {
             Debug.WriteLine("Login successful.");
+
+            lb_version_system.ForeColor = Color.FromArgb(191, 191, 191);
+            lb_version_system.Font = new Font(lb_version_system.Font, FontStyle.Regular);
+
+            lb_developby.ForeColor = Color.FromArgb(191, 191, 191);
+            lb_developby.Font = new Font(lb_developby.Font, FontStyle.Regular);
+
         }
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void version_system_Click(object sender, EventArgs e)
+        {
+            
+            MessageBox.Show("check click");
+        }
+
+        private void version_system_MouseEnter(object sender, EventArgs e)
+        {
+            lb_version_system.ForeColor = Color.White;
+            lb_version_system.Font = new Font(lb_version_system.Font, FontStyle.Regular);
+        }
+
+        private void lb_version_system_MouseLeave(object sender, EventArgs e)
+        {
+            lb_version_system.ForeColor = Color.FromArgb(191, 191, 191);
+            lb_version_system.Font = new Font(lb_version_system.Font, FontStyle.Regular);
+        }
+
+        private void lb_developby_MouseEnter(object sender, EventArgs e)
+        {
+            lb_developby.ForeColor = Color.White;
+            lb_developby.Font = new Font(lb_developby.Font, FontStyle.Regular);
+        }
+
+        private void lb_developby_MouseLeave(object sender, EventArgs e)
+        {
+            lb_developby.ForeColor = Color.FromArgb(191, 191, 191);
+            lb_developby.Font = new Font(lb_developby.Font, FontStyle.Regular);
         }
     }
 }
