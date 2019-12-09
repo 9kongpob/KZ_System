@@ -35,6 +35,7 @@
             this.logo_system = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.logo_factory = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.MenuTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo_system)).BeginInit();
             this.panel1.SuspendLayout();
@@ -56,12 +57,14 @@
             // lb_developby
             // 
             this.lb_developby.AutoSize = true;
+            this.lb_developby.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lb_developby.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.lb_developby.Location = new System.Drawing.Point(8, 816);
             this.lb_developby.Name = "lb_developby";
             this.lb_developby.Size = new System.Drawing.Size(213, 17);
             this.lb_developby.TabIndex = 1;
             this.lb_developby.Text = "Since 2019, Develop By IT SIWT";
+            this.lb_developby.Click += new System.EventHandler(this.lb_developby_Click);
             this.lb_developby.MouseEnter += new System.EventHandler(this.lb_developby_MouseEnter);
             this.lb_developby.MouseLeave += new System.EventHandler(this.lb_developby_MouseLeave);
             // 
@@ -107,12 +110,23 @@
             this.logo_factory.TabIndex = 0;
             this.logo_factory.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(568, 272);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(320, 112);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1482, 853);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MenuTab);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -140,6 +154,7 @@
         private System.Windows.Forms.PictureBox logo_factory;
         private System.Windows.Forms.Label lb_developby;
         private System.Windows.Forms.Label lb_version_system;
+        private System.Windows.Forms.Button button1;
     }
 }
 

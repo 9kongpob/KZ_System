@@ -8,20 +8,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 
 namespace FormMain
 {
     public partial class FormMain : Form
     {
+
+        string emailUser;
+
         public FormMain()
         {
             InitializeComponent();
             
         }
 
-        private void FormMain_Load(object sender, EventArgs e)
+        public void FormMain_Load(object sender, EventArgs e)
         {
+
             Debug.WriteLine("Login successful.");
 
             lb_version_system.ForeColor = Color.FromArgb(191, 191, 191);
@@ -37,11 +41,7 @@ namespace FormMain
             Application.Exit();
         }
 
-        private void version_system_Click(object sender, EventArgs e)
-        {
-            
-            MessageBox.Show("check click");
-        }
+
 
         private void version_system_MouseEnter(object sender, EventArgs e)
         {
@@ -65,6 +65,24 @@ namespace FormMain
         {
             lb_developby.ForeColor = Color.FromArgb(191, 191, 191);
             lb_developby.Font = new Font(lb_developby.Font, FontStyle.Regular);
+        }
+
+        private void version_system_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show("check about KZ System");
+        }
+
+        private void lb_developby_Click(object sender, EventArgs e)
+        {
+            
+            MessageBox.Show("check email user : " + emailUser);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Check Data Connect : ");
         }
     }
 }
