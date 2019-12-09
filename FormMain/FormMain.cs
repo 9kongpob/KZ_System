@@ -71,6 +71,13 @@ namespace FormMain
         {
 
             MessageBox.Show("check about KZ System");
+            Form frmAbout = new FormAbout();
+            frmAbout.Show();
+
+            //background WinApp Disable
+            //...
+            //...
+            //...
         }
 
         private void lb_developby_Click(object sender, EventArgs e)
