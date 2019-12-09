@@ -135,6 +135,8 @@
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KZ System";
+            this.Activated += new System.EventHandler(this.FormMain_Activated);
+            this.Deactivate += new System.EventHandler(this.FormMain_Deactivate);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.MenuTab.ResumeLayout(false);

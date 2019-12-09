@@ -91,5 +91,15 @@ namespace FormMain
         {
             MessageBox.Show("Check Data Connect : ");
         }
+
+        private void FormMain_Activated(object sender, EventArgs e)
+        {
+            this.Text = "KZ System : Activated";
+        }
+
+        private void FormMain_Deactivate(object sender, EventArgs e)
+        {
+            this.Text = "KZ System : Deactivated";
+        }
     }
 }
