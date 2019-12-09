@@ -102,5 +102,11 @@
   <ItemGroup>
     <None Include="images\email.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="FormMain\FormMain.csproj">
+      <Project>{b119f176-a06a-4449-aa2a-eb66022a70cd}</Project>
+      <Name>FormMain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
+using FormMain;
 
 
 namespace LoginC01
@@ -171,10 +172,16 @@ namespace LoginC01
                     Debug.WriteLine("Connecting...");
                     Debug.WriteLine("Connecting Server Database...");
                     Debug.WriteLine("Success. ---> Connected Server Database.");
-                    MessageBox.Show("Connected Server Database.","Connect Data");
+                    //MessageBox.Show("Connected Server Database.","Connect Data");
 
                     //check access new form FormMain
+                    //Add another project add reference
 
+                    this.Hide();
+                    FormMain.FormMain frmMain = new FormMain.FormMain();
+                    frmMain.Show();
+
+                    
                 }
                 else
                 {
