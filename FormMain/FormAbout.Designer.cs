@@ -39,6 +39,8 @@
             this.Name = "FormAbout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About KZ System";
+            this.Activated += new System.EventHandler(this.FormAbout_Activated);
+            this.Deactivate += new System.EventHandler(this.FormAbout_Deactivate);
             this.ResumeLayout(false);
 
         }

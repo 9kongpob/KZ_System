@@ -16,5 +16,15 @@ namespace FormMain
         {
             InitializeComponent();
         }
+
+        private void FormAbout_Activated(object sender, EventArgs e)
+        {
+            this.Text = "About KZ System : Activated";
+        }
+
+        private void FormAbout_Deactivate(object sender, EventArgs e)
+        {
+            this.Text = "About KZ System : Deactivated";
+        }
     }
 }
