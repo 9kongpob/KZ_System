@@ -33,6 +33,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.logo_system = new System.Windows.Forms.PictureBox();
             this.logo_factory = new System.Windows.Forms.PictureBox();
+            this.version_system = new System.Windows.Forms.Label();
+            this.developby = new System.Windows.Forms.Label();
             this.MenuTab.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo_system)).BeginInit();
@@ -42,6 +44,8 @@
             // MenuTab
             // 
             this.MenuTab.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.MenuTab.Controls.Add(this.developby);
+            this.MenuTab.Controls.Add(this.version_system);
             this.MenuTab.Controls.Add(this.logo_system);
             this.MenuTab.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuTab.Location = new System.Drawing.Point(0, 0);
@@ -77,6 +81,26 @@
             this.logo_factory.TabIndex = 0;
             this.logo_factory.TabStop = false;
             // 
+            // version_system
+            // 
+            this.version_system.AutoSize = true;
+            this.version_system.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.version_system.Location = new System.Drawing.Point(8, 792);
+            this.version_system.Name = "version_system";
+            this.version_system.Size = new System.Drawing.Size(164, 17);
+            this.version_system.TabIndex = 1;
+            this.version_system.Text = "KZ System Version 0.0.1";
+            // 
+            // developby
+            // 
+            this.developby.AutoSize = true;
+            this.developby.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.developby.Location = new System.Drawing.Point(8, 816);
+            this.developby.Name = "developby";
+            this.developby.Size = new System.Drawing.Size(213, 17);
+            this.developby.TabIndex = 1;
+            this.developby.Text = "Since 2019, Develop By IT SIWT";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -94,6 +118,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.MenuTab.ResumeLayout(false);
+            this.MenuTab.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logo_system)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo_factory)).EndInit();
@@ -107,6 +132,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox logo_system;
         private System.Windows.Forms.PictureBox logo_factory;
+        private System.Windows.Forms.Label developby;
+        private System.Windows.Forms.Label version_system;
     }
 }
 
