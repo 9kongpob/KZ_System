@@ -16,7 +16,6 @@ namespace FormMain
     {
 
         string emailUser;
-        int frmActivated = 1;
 
         public FormMain()
         {
@@ -34,15 +33,13 @@ namespace FormMain
 
             lb_developby.ForeColor = Color.FromArgb(191, 191, 191);
             lb_developby.Font = new Font(lb_developby.Font, FontStyle.Regular);
-
+            
         }
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
-
-
 
         private void version_system_MouseEnter(object sender, EventArgs e)
         {
@@ -71,14 +68,8 @@ namespace FormMain
         private void version_system_Click(object sender, EventArgs e)
         {
 
-            MessageBox.Show("check about KZ System");
             Form frmAbout = new FormAbout();
-            frmAbout.Show();
-
-            //background WinApp Disable
-            //...
-            //...
-            //...
+            frmAbout.ShowDialog();
         }
 
         private void lb_developby_Click(object sender, EventArgs e)
@@ -93,16 +84,5 @@ namespace FormMain
             MessageBox.Show("Check Data Connect : ");
         }
 
-        private void FormMain_Activated(object sender, EventArgs e)
-        {
-            frmActivated = 1;
-            this.Text = "KZ System : Activated || Value : " + frmActivated;
-        }
-
-        private void FormMain_Deactivate(object sender, EventArgs e)
-        {
-            frmActivated = 0;
-            this.Text = "KZ System : Deactivated || Value : " + frmActivated;
-        }
     }
 }
