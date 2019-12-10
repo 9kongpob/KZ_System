@@ -15,7 +15,7 @@ namespace FormMain
         public FormAbout()
         {
             InitializeComponent();
-        }
+                    }
 
     }
 }

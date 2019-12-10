@@ -42,7 +42,7 @@ namespace FormMain
                 e.Cancel = MessageBox.Show(@"Do you really want to close the form?",
                                            /*Application.ProductName*/"KZ System",
                                            MessageBoxButtons.YesNo) == DialogResult.No;
-            //Application.Exit();
+            Application.Exit();
         }
 
         private void version_system_MouseEnter(object sender, EventArgs e)
