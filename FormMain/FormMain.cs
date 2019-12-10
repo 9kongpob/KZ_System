@@ -38,7 +38,11 @@ namespace FormMain
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            if (e.CloseReason == CloseReason.UserClosing)
+                e.Cancel = MessageBox.Show(@"Do you really want to close the form?",
+                                           /*Application.ProductName*/"KZ System",
+                                           MessageBoxButtons.YesNo) == DialogResult.No;
+            //Application.Exit();
         }
 
         private void version_system_MouseEnter(object sender, EventArgs e)
